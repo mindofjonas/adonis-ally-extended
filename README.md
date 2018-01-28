@@ -59,6 +59,21 @@ mixer: {
   clientId: Env.get('MIXER_CLIENT_ID'),
   clientSecret: Env.get('MIXER_CLIENT_SECRET'),
   redirectUri: `${Env.get('APP_URL')}/authenticated/mixer`
+},
+
+/*
+ |--------------------------------------------------------------------------
+ | Patreon Configuration
+ |--------------------------------------------------------------------------
+ |
+ | You can access your application credentials from the Patreon developers
+ | portal. https://www.patreon.com/portal
+ |
+ */
+patreon: {
+  clientId: Env.get('PATREON_CLIENT_ID'),
+  clientSecret: Env.get('PATREON_CLIENT_SECRET'),
+  redirectUri: `${Env.get('APP_URL')}/authenticated/patreon`
 }
 ...
 ```
@@ -73,12 +88,13 @@ Awaiable drivers are:
 * twitch //twtich.tv
 * mixer //mixer.com
 * vk //vk.com
+* patreon //patreon.com
 
 #### Example:
 ```js
 hooks.after.providersRegistered(() => {
   const AllyExtended = use('@mikield/ally-extended')
-  AllyExtended.use('twitch').use('mixer').use('vk')
+  AllyExtended.use('twitch').use('mixer').use('vk').use('patreon')
 })
 ```
 
