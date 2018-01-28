@@ -202,7 +202,7 @@ class Patreon extends OAuth2Scheme {
         userProfile.data.attributes.vanity,
         userProfile.data.attributes.email,
         userProfile.data.attributes.full_name,
-        userProfile.image_url
+        userProfile.data.attributes.image_url
       )
       .setToken(
         accessTokenResponse.accessToken,
