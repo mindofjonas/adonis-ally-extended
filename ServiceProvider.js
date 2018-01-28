@@ -15,7 +15,8 @@ const _ = require('lodash')
 const Drivers = {
   vk: require('./Drivers/Vk'),
   twitch: require('./Drivers/Twitch'),
-  mixer: require('./Drivers/Mixer')
+  mixer: require('./Drivers/Mixer'),
+  patreon: require('./Drivers/Patreon')
 }
 
 class AllyServiceProvider extends ServiceProvider {
